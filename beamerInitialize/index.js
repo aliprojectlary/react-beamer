@@ -5,7 +5,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = beamerInitialize;
 
-function beamerInitialize(id) {
+function beamerInitialize(id, language) {
   var url = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : false;
 
   if (!window) {
@@ -17,7 +17,8 @@ function beamerInitialize(id) {
   }
 
   window.beamer_config = {
-    product_id: id
+    product_id: id,
+    language,
   };
   var beamerURL = url || "https://app.getbeamer.com/js/beamer-embed.js";
   var head = document.getElementsByTagName("head")[0];
