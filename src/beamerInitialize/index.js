@@ -1,4 +1,4 @@
-export default function beamerInitialize(id, language, url = false) {
+export default function beamerInitialize(id, language, selector, embed, url = false) {
   if (!window) {
     return;
   }
@@ -10,6 +10,8 @@ export default function beamerInitialize(id, language, url = false) {
   window.beamer_config = {
     product_id: id,
     language,
+    selector,
+    embed,
   };
 
   const beamerURL = url || "https://app.getbeamer.com/js/beamer-embed.js";
